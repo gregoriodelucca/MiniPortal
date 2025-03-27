@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containerNoticia {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens se ajustem em diferentes linhas se necessário */
+  padding: 20px 0 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.containerNoticia img {
+  width: 20%; /* Para telas maiores */
+  max-width: 100%; /* Garante que a imagem não ultrapasse o container */
+}
+
+.containerNoticia p {
+  padding: 20px;
+  width: 20%; /* Para telas maiores */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .containerNoticia {
+    flex-direction: column; /* Faz o layout empilhar os itens verticalmente */
+    align-items: center; /* Alinha os itens ao centro */
+  }
+
+  .containerNoticia img,
+  .containerNoticia p {
+    width: 100%; /* Faz a imagem e o texto ocuparem 100% da largura */
+    padding: 10px 0; /* Ajusta o padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .containerNoticia img {
+    width: 80%; /* Ajusta a largura da imagem para telas ainda menores */
+  }
+
+  .containerNoticia p {
+    width: 80%; /* Ajusta a largura do texto para telas menores */
+  }
+}
